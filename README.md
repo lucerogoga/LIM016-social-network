@@ -20,6 +20,8 @@ Es una comunidad formada por usuarios que se relacionan entre ellos mediante una
 El objetivo de las redes sociales es crear una comunidad reuniendo usuarios (pueden ser amigos, familias, colegas, clientes o empresas) con intereses similares, para que puedan compartir información, fotos, videos, ideas y mensajes.  En el caso de las empresas, ayuda al reconocimento de la marca, promoción de productos/servicios y a resolver dudas de los clientes.
 Podríamos decir que los principales usos de una red social, son: *compartir, informar, interactuar y marketear.*
 
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/redes-sociales.jpg" width=500></p>
+
 ### Redes sociales sobre comida
 
 Del mismo modo que existen tendencias sobre moda, estilo de vida y salud, el mundo gastronómico año a año tiene sus propias tendencias, las cuales podemos ver reflejadas en periódicos, revistas, Pinterest, hashtags, etc.
@@ -32,6 +34,8 @@ Generalmente, los seguidores de tendencias gastronómicas buscan información so
 
 Al no contar con una red que centralice todas estas necesidades, el usuario se ve en necesidad de revisar redes de supermercados, revisar blogs, preguntar en su entorno o leer varios artículos.
 
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/red-comida.jpg" width=500></p>
+
 ## 2. Yami, una aventura culinaria
 
 Nuestro proyecto, Yami, es una red social para todo usuario interesado en informarse/interactuar y compartir sus experiencias gastronómicas, desde una receta intentada hasta una reseña de un restaurante que haya visitado.  La aplicación permitirá compartir publicaciones de preguntas, tutoriales, recetas, con o sin fotos, compartir reseñas y mucho más.
@@ -41,6 +45,8 @@ Este proyecto será una Single-page Application (SPA), es decir que contará con
 Para garantizar todas las funciones de una red social necesitaremos autenticar a nuestros usuarios, recopilar su información y guardar sus fotos.  Firebase es una plataforma alojada en la nube que ofrece varios servicios para crear y desarrollar aplicaciones, utilizaremos su servicio de Autenticación, Firestore Database y Storage.
 
 El despliegue de la página se hará en Github desde el repositorio principal.
+
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-intro.PNG" width=400></p>
 
 ### Análisis de la encuesta
 
@@ -173,9 +179,17 @@ c. Editar perfil
 
 ## 4. Proceso de diseño
 
-Inspiración inicial
-Prototipo de baja fidelidad
-Prototipo de alta fidelidad
+**Inspiración inicial**
+
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/inspo.png" width=700></p>
+
+**Prototipo de baja fidelidad**
+
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/proto-bf.png" width=800></p>
+
+**Prototipo de alta fidelidad**
+
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/proto-af.png" width=900></p>
 
 ## 5. Resultados del testeo
 
@@ -190,5 +204,17 @@ Prototipo de alta fidelidad
 ## 6. Producto final
 
 ### Fotos del resultado final
+
+**Vista mobile del timeline**
+
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-real-timeline.PNG" width=300></p>
+
+**Vista mobile del perfil**
+
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-real-profile.PNG" width=300></p>
+
+**Vista desktop**
+
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-desktop.PNG" width=1000></p>
 
 ### [Link al deploy de la aplicación](https://lucerogoga.github.io/LIM016-social-network/src/#/)
