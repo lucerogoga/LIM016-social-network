@@ -282,5 +282,3 @@ Tuvimos un percance al inicio del testeo, olvidamos colocar el url del deploy en
 **Vista desktop**
 
 <p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-desktop.PNG" width=1000></p>
-
-### [Link al deploy de la aplicación](https://lucerogoga.github.io/YAMI-LIM016-social-network/src/#/)
