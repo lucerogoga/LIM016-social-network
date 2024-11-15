@@ -6,16 +6,12 @@ export function validateEmail(email) {
     return false;
   }
 
-  // return expression.test(email.trim());
-
   return typeof email === 'string'
     ? expression.test(email.trim())
     : expression.test(`${email}`);
 }
 
 export function validatePassword(password) {
-  // La contraseña debe tener entre 8 a 14 caracteres
-
   const expression = /^.{6,14}$/;
 
   if (!password) {

@@ -6,8 +6,6 @@ import { Loader } from './Loader.js';
 
 // se ejecuta una sola vez
 export const Router = () => {
-  // console.log("entró a función router");
-
   const $root = document.getElementById('root');
   $root.textContent = '';
 
@@ -80,35 +78,26 @@ export const Router = () => {
       default:
         // todo: Deberíamos crear una vista en caso que el usuario coloque una url no existente
         if (auth.currentUser) {
-          // return $root.appendChild(components.login());
           return $root.appendChild(components.timeline());
         }
         return $root.appendChild(components.login());
-      // return (window.location.hash = "#/");
-
-      // break;
     }
   }
 
-  // para asegurar que se ejecute una sola vez
   let hasRouterStarted = false;
 
-  // se ejecuta una sola vez
   function start() {
     render();
     window.addEventListener('hashchange', () => {
       render();
     });
-    // ya me ejecute
     hasRouterStarted = true;
   }
 
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       window.location.hash = '#/';
-    // console.log('el usuario ya está sign out!');
     }
-    // ya se ejecuto el router?
     if (!hasRouterStarted) start();
   });
 };
