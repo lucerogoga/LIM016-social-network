@@ -37,7 +37,7 @@ To provide full social networking functionality, we will implement user authenti
 
 The application will be deployed through GitHub Pages, using the main repository for hosting.
 
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-intro.PNG" width=400></p>
+<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/public/yami-intro.PNG" width=400></p>
 
 ### Survey analysis
 
@@ -69,7 +69,7 @@ a. As a visitor, I want to register to have an account in the app.
   * Manual data verification in Firebase Authentication
   * Usability testing</p></details>
 
-b. Yo como usuario registrado, quiero logearme, para acceder al contenido de la aplicación
+b. As a registered user, I want to log in to access the content of the application.
 
   <details><summary>Acceptance criteria</summary><p>
 
