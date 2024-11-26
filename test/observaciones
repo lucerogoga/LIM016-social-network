@@ -1,11 +1,11 @@
-Parece que al momento de hacer tests de funciones para chequear elementos del DOM que tienen métodos de
-firebase, siempre deben estar mockeadas LAS FUNCIONES (Métodos) de Firebase (Como los de auth, firestore, storage, etc)
+// Parece que al momento de hacer tests de funciones para chequear elementos del DOM que tienen métodos de
+// firebase, siempre deben estar mockeadas LAS FUNCIONES (Métodos) de Firebase (Como los de auth, firestore, storage, etc)
 
-------Si yo quiero probar un Componente entero (ejemplo: Todo el componente Login, en lugar de simular los inputs en el document.body.innerHTML) tengo que mockear TODAS las funciones que el componente tiene de firebase
-(no importa que no las vayas a testear porque no las tenia pensado hacerlo, pero sin ellas tu componente Login no funcionaría, o aunque sea no me funcionó en mis tests....),
-de lo contrario no me sirven, además, tengo que asignarle un value porque al momento que carga por primera vez el componente el value de cualquier input no tiene ningún valor.
+// ------Si yo quiero probar un Componente entero (ejemplo: Todo el componente Login, en lugar de simular los inputs en el document.body.innerHTML) tengo que mockear TODAS las funciones que el componente tiene de firebase
+// (no importa que no las vayas a testear porque no las tenia pensado hacerlo, pero sin ellas tu componente Login no funcionaría, o aunque sea no me funcionó en mis tests....),
+// de lo contrario no me sirven, además, tengo que asignarle un value porque al momento que carga por primera vez el componente el value de cualquier input no tiene ningún valor.
 
-Es por eso que al estar en el "it" , tengo que asignarle uno de la siguiente manera:
+// Es por eso que al estar en el "it" , tengo que asignarle uno de la siguiente manera:
 
 it ('should XXXX', () => {
 const inputCorreo = document.getElementBy('inputCorreoId')
@@ -16,18 +16,18 @@ const inputPwd = document.getElementBy('inputPwdId')
 
 })
 
-Luego de asignarle valores, es cuando ya puedo llamar a la función handleSubmit (que es una promesa), y que,
-al momento que esté resuelta (.then(() => {})) es que ingreso los expects que desee
+// Luego de asignarle valores, es cuando ya puedo llamar a la función handleSubmit (que es una promesa), y que,
+// al momento que esté resuelta (.then(() => {})) es que ingreso los expects que desee
 
-Dentro del then puedo chequear si la función de firebase (enviarIngreso, que ya está mockeada en auth, de lo contrario, no correrán efectivamente tus tests) que tiene dentro de mi función handleSubmit están pasando como argumentos los valores de mis inputs... y para eso es que uso "mock.calls[0][0]" (primer argumento) y "mock.calls[0][1]" (segundo argumento)
+// Dentro del then puedo chequear si la función de firebase (enviarIngreso, que ya está mockeada en auth, de lo contrario, no correrán efectivamente tus tests) que tiene dentro de mi función handleSubmit están pasando como argumentos los valores de mis inputs... y para eso es que uso "mock.calls[0][0]" (primer argumento) y "mock.calls[0][1]" (segundo argumento)
 
-Ahora...
+// Ahora...
 
--------Si yo no quiero comprobar un componente entero, sino sólo lo necesario, puedo olvidarme de hacer los mocks de todas estas funcionalidades de firebase que se encontraban ligadas a mi componente Login, SOLO TENDRÍA QUE HACERLE UN MOCK A LA FUNCIONALIDAD DE FIREBASE QUE ESTÁ LIGADA A LA FUNCIONALIDAD QUE DESEO TESTEAR (si es HandleSubmit, entonces mockeo solamente enviarIngreso) ya que voy a realizarlo manual de la siguiente manera (Y ya le puedes colocar los values de los inputs desde aquí
-:D Si quieres, en caso de no querer, lo puedes hacer asignándole valores como anteriormente en variables, y le asignas su value):
+// -------Si yo no quiero comprobar un componente entero, sino sólo lo necesario, puedo olvidarme de hacer los mocks de todas estas funcionalidades de firebase que se encontraban ligadas a mi componente Login, SOLO TENDRÍA QUE HACERLE UN MOCK A LA FUNCIONALIDAD DE FIREBASE QUE ESTÁ LIGADA A LA FUNCIONALIDAD QUE DESEO TESTEAR (si es HandleSubmit, entonces mockeo solamente enviarIngreso) ya que voy a realizarlo manual de la siguiente manera (Y ya le puedes colocar los values de los inputs desde aquí
+// :D Si quieres, en caso de no querer, lo puedes hacer asignándole valores como anteriormente en variables, y le asignas su value):
 
-document.body.innerHTML = `<input class="form__input" type="email" id="lemail" name="lemail" placeholder="Correo electrónico" value="laboratoria@gmail.com"> <input class="form__input" type="password" id="lpassword" name="lpassword" placeholder="Contraseña" value="labolabo"> <div class="err-container"><small class="error-msg" id="errorLogin"></small></div> <div class="btn" id="submit-register"><span class="btn__text">Iniciar sesión</span></div>`;
-`
-Esto es lo único que cambiaría, porque lo que sigue para hacer tests es exactamente los mismos pasos..(con los del it, luego el handleSubmit , y los expects....todo igual el resto)
+// document.body.innerHTML = `<input class="form__input" type="email" id="lemail" name="lemail" placeholder="Correo electrónico" value="laboratoria@gmail.com"> <input class="form__input" type="password" id="lpassword" name="lpassword" placeholder="Contraseña" value="labolabo"> <div class="err-container"><small class="error-msg" id="errorLogin"></small></div> <div class="btn" id="submit-register"><span class="btn__text">Iniciar sesión</span></div>`;
+// `
+// Esto es lo único que cambiaría, porque lo que sigue para hacer tests es exactamente los mismos pasos..(con los del it, luego el handleSubmit , y los expects....todo igual el resto)
 
-No soy una experta, pero espero que les sirva estas observaciones de algo <3
+// No soy una experta, pero espero que les sirva estas observaciones de algo <3

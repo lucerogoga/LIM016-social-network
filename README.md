@@ -1,284 +1,224 @@
-# Red Social "Yami"
+# Social Network "Yami"
 
-## Índice
+## Índex
 
-* [0. Link al deploy de la app](https://lucerogoga.github.io/YAMI-LIM016-social-network/src/#/)
-* [1. Preámbulo](#1-preámbulo)
-* [2. Yami, una aventura culinaria](#2-yami-una-aventura-culinaria)
-* [3. Historias de usuario](#3-historias-de-usuario)
-* [4. Proceso de diseño](#4-proceso-de-diseño)
-* [5. Resultados del testeo](#5-resultados-del-testeo)
-* [6. Producto final](#6-producto-final)
+* [0. Link al deploy de la app](https://lucerogoga.github.io/social-network/src/#/)
+* [1. Preámble](#1-preámbulo)
+* [2. Yami, a culinary adventure](#2-yami-a-culinari-adventure)
+* [3. User histories](#3-user-histories)
+* [4. Design process](#4-desing-process)
+* [5. Deploy](#5-deploy)
 
 
-## 1. Preámbulo
+## 1. Preamble
 
-### ¿Qué es una red social?
+### What is a social network?
 
-Es una comunidad formada por usuarios que se relacionan entre ellos mediante una plataforma de Internet.  
+It is a community formed by users who interact with each other through an Internet platform.
 
-El objetivo de las redes sociales es crear una comunidad reuniendo usuarios (pueden ser amigos, familias, colegas, clientes o empresas) con intereses similares, para que puedan compartir información, fotos, videos, ideas y mensajes.  En el caso de las empresas, ayuda al reconocimento de la marca, promoción de productos/servicios y a resolver dudas de los clientes.
-Podríamos decir que los principales usos de una red social, son: *compartir, informar, interactuar y marketear.*
+The objective of social networks is to create a community by bringing together users (they can be friends, families, colleagues, clients or companies) with similar interests, so that they can share information, photos, videos, ideas and messages. In the case of companies, it helps with brand recognition, promotion of products/services and to resolve customer queries.
+We could say that the main uses of a social network are: *share, inform, interact and market.*
 
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/redes-sociales.jpg" width=500></p>
+### Social media about food
 
-### Redes sociales sobre comida
+The gastronomic world follows trends like fashion and lifestyle, visible through platforms like magazines, Pinterest, and hashtags. Social networks such as Instagram, Pinterest, and Tasty dominate discussions, while apps like Recon meet diverse needs, allowing users to share restaurant experiences, rate establishments, search for restaurants, and organize outings.
 
-Del mismo modo que existen tendencias sobre moda, estilo de vida y salud, el mundo gastronómico año a año tiene sus propias tendencias, las cuales podemos ver reflejadas en periódicos, revistas, Pinterest, hashtags, etc.
+In Peru, no platform fully integrates these features. Options like Mesa 24/7, blogs, and Facebook groups help users find restaurants and huariques but lack comprehensive information. Food enthusiasts often seek product recommendations, nutritional data, tutorials, rankings, and restaurant suggestions.
 
-Redes como Instagram, Pinterest y Tasty son las que más generan conversación al respecto.  Asimismo, aplicaciones nuevas como Recon, reunen gran parte de las necesidades del usuario: permiten compartir una experiencia en un restaurante y calificarla, compartir recetas, buscar restaurantes y crear eventos con amigos para ir a comer.
+Without a centralized solution, users must gather information from multiple sources, creating a fragmented and inefficient experience.
 
-Sin embargo, en Perú no existe como tal una red social que cubra todo el espectro de necesidades del usuario.  Aplicaciones como Mesa 24/7, blogs gastronónicos y grupos de Facebook dedicados a encontrar los mejores restaurantes y huariques, no cuentan con toda la información que como usuario se espera.
+## 2. Yami, a culinary adventure
 
-Generalmente, los seguidores de tendencias gastronómicas buscan información sobre donde conseguir mejores productos, información nutricional, tutoriales, rankings y recomendaciones de restaurantes.
+Our project, Yami, is a social network designed for users interested in exploring, interacting, and sharing their culinary experiences—from trying a new recipe to reviewing a recently visited restaurant. The application will allow users to share posts with questions, tutorials, recipes (with or without photos), reviews, and much more.
 
-Al no contar con una red que centralice todas estas necesidades, el usuario se ve en necesidad de revisar redes de supermercados, revisar blogs, preguntar en su entorno o leer varios artículos.
+The project will be developed as a Single-Page Application (SPA), meaning it will load a single HTML file initially and dynamically render different views using JavaScript based on user interactions.
 
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/red-comida.jpg" width=500></p>
+To provide full social networking functionality, we will implement user authentication, collect user information, and store photos. For this, we will utilize Firebase, a cloud-based platform offering various services for app development. Specifically, we will use Firebase Authentication, Firestore Database, and Storage services.
 
-## 2. Yami, una aventura culinaria
-
-Nuestro proyecto, Yami, es una red social para todo usuario interesado en informarse/interactuar y compartir sus experiencias gastronómicas, desde una receta intentada hasta una reseña de un restaurante que haya visitado.  La aplicación permitirá compartir publicaciones de preguntas, tutoriales, recetas, con o sin fotos, compartir reseñas y mucho más.
-
-Este proyecto será una Single-page Application (SPA), es decir que contará con solo un archivo HTML, que cargará una sola vez y pedirá diferentes vistas hechas en Javascript, dependiendo de la interacción del usuario.
-
-Para garantizar todas las funciones de una red social necesitaremos autenticar a nuestros usuarios, recopilar su información y guardar sus fotos.  Firebase es una plataforma alojada en la nube que ofrece varios servicios para crear y desarrollar aplicaciones, utilizaremos su servicio de Autenticación, Firestore Database y Storage.
-
-El despliegue de la página se hará en Github desde el repositorio principal.
+The application will be deployed through GitHub Pages, using the main repository for hosting.
 
 <p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-intro.PNG" width=400></p>
 
-### Análisis de la encuesta
+### Survey analysis
 
-Antes de iniciar la construcción de la aplicación, realizamos una encuesta para conocer mejor al usuario local y cuáles eran sus preferencias.
+We conducted a survey to understand local user preferences. Over 90% showed interest in a food-focused social network, with 70% identifying as food enthusiasts, suggesting potential to engage the remaining 30%.
 
-Más del 90% de encuestadas afirmaron estar interesadas en una red social centrada en comida, es decir, serían parte de las usuarias de nuestra aplicación.  Un 70% de las encuestadas se considera amante de la comida, esto podría sugerir que la existencia de un medio, como el nuestro, podría generar mayor interés en el otro 30% que aún no se considera como tal una amante de la comida.
+While only 17.6% prefer cooking, 41.2% enjoy dining out or ordering food, and 41.2% are undecided. Dining enthusiasts mainly rely on recommendations from friends or social media, while aspiring cooks seek tips, recipes, tutorials, and product advice. Respondents also valued restaurant rankings, kitchen tool recommendations, nutritional information, and restaurant ratings.
 
-De las participantes, solo 17.6% prefieren cocinar.  Por otro lado, tanto las que prefieren salir a comer/pedir a domicilio, como las indecisas obtuvieron 41.2%, cada una.
+## 3. User Stories
 
-Si prefieren salir a comer, el 64% pide recomendaciones a amigos/familiares y en segundo lugar, buscan lugares nuevos en diferentes redes sociales.
+With the information collected in the survey, we divided our User Stories into two stages.
 
-Por otro lado, las que prefieren cocinar o estan aprendiendo, buscan tips de cocina, recetas, tutoriales y recomendaciones de productos.
+### MVP
 
-Finalmente, las encuestadas también mostraron interés en un ranking de restaurantes, recomendaciones de utensilios de cocina, información nutricional, horarios y puntuación de restaurantes.
+a. As a visitor, I want to register to have an account in the app.
+  <details><summary>Acceptance criteria</summary><p>
 
-## 3. Historias de usuario
-
-Con la información recopilada en la encuesta, dividimos nuestras Historias de Usuario en dos etapas.
-
-### Versión básica
-
-a. Yo como visitante, quiero registrarme, para tener una cuenta en la app
-
-  <details><summary>Criterios de aceptación</summary><p>
-
-  * El visitante no debe estar registrado previamente
-  *	Debe ingresar un correo válido
-  *	Debe ingresar una contraseña de 6-14 dígitos (con al menos una mayúscula, un número y un símbolo)
-  *	El input de contraseña debe ser secreto
-  *	Si uno o ambos campos están vacíos o no cumplen con lo requerido, aparecerá un mensaje de error
-  *	Al clickear sobre Términos y Condiciones, un modal se abre para mostrar el documento
-  *	Debe clickear en Registrarme para validar sus datos
-  * El visitante también podrá registrarse con sus datos de Google
-  * Si los datos son válidos, se pedirán datos adicionales para terminar el proceso</p></details>
+  * The visitor must not have previously registered
+  * A valid email must be entered
+  * A password of 6-14 digits must be entered (with at least one capital letter, one number and one symbol)
+  * The password input must be secret
+  * If one or both fields are empty or do not meet the requirements, an error message will appear
+  * When clicking on Terms and Conditions, a modal will open to show the document
+  * You must click on Register to validate your data
+  * The visitor can also register with their Google data
+  * If the data is valid, additional data will be requested to complete the process</p></details>
   
-  <details><summary>Definición de terminado</summary><p>
+  <details><summary>Definition of finished</summary><p>
   
-  * Verificación manual de datos en Firebase Authentication
-  *	Testeo de usabilidad</p></details>
+  * Manual data verification in Firebase Authentication
+  * Usability testing</p></details>
 
 b. Yo como usuario registrado, quiero logearme, para acceder al contenido de la aplicación
 
-  <details><summary>Criterios de aceptación</summary><p>
+  <details><summary>Acceptance criteria</summary><p>
 
-  *	El usuario debe estar ya registrado
-  *	Debe ingresar el correo y contraseña con las que se registró
-  *	El input de contraseña debe ser secreto
-  *	Debe clickear en el botón de Iniciar sesión para validar sus datos y acceder a la app
-  *	El usuario solo podrá logearse si sus datos son válidos
-  *	Si uno o ambos campos están vacíos no podrá logearse y aparecerá un mensaje de error
-  *	Clickeando en Olvidé mi contraseña, se enviará un correo para reestablecer la contraseña
-  *	El usuario también podrá logearse con sus datos de Google
-  *	Si el usuario no está registrado, puede clickear en Regístrate y proceder a la ventana de registro</p></details>
+  * The user must already be registered
+  * The user must enter the email and password with which he/she registered
+  * The password input must be secret
+  * The user must click on the Login button to validate his/her data and access the app
+  * The user will only be able to log in if his/her data is valid
+  * If one or both fields are empty, he/she will not be able to log in and an error message will appear
+  * By clicking on I forgot my password, an email will be sent to reset the password
+  * The user will also be able to log in with his/her Google data
+  * If the user is not registered, he/she can click on Register and proceed to the registration window</p></details>
   
-  <details><summary>Definición de terminado</summary><p>
+  <details><summary>Definition of finished</summary><p>
   
-  * Verificación manual de datos en Firebase Authentication
-  *	Testeo de usabilidad</p></details>
+* Manual data verification in Firebase Authentication
+* Usability testing</p></details>
   
-c. Yo como usuario, quiero publicar posts, para expresar mis dudas, opiniones o tips culinarios con otros usuarios
+c. As a user, I want to publish posts to express my doubts, opinions or culinary tips with other users.
 
-  <details><summary>Criterios de aceptación</summary><p>
+  <details><summary>Acceptance criteria</summary><p>
 
-  *	El usuario debe estar logeado
-  *	El input no puede estar vacío
-  *	Los posts deben ser visibles desde el dashboard y el foro
-  *	Los posts deben incluir el nombre del usuario que lo posteo
-  *	El usuario debe clickear sobre el ícono de + y elegir Publicación, que los dirige a una vista con el input y un botón para publicar
-  *	Al clickear en publicar, su post será añadido en la sección de Foro y en el dashboard</p></details>
+  * User must be logged in
+  * Input cannot be empty
+  * Posts must be visible from the dashboard and forum
+  * Posts must include the name of the user who posted it
+  * User must click on the + icon and choose Post, which takes them to a view with the input and a button to post
+  * When you click on post, your post will be added to the Forum section and the dashboard</p></details>
   
-  <details><summary>Definición de terminado</summary><p>
+  <details><summary>Definition of finished</summary><p>
   
-  * Verificación manual de datos en Firestore Database
-  *	Testeo de usabilidad</p></details>
+* Manual verification of data in Firestore Database
+* Usability testing</p></details>
   
-d. Yo como usuario, quiero poder dar y retirar mi like de un post/reseña, para indicar que me agrada o dejó de agradarme su contenido  
+d. As a user, I want to be able to give and remove my like from a post/review, to indicate that I like or dislike its content. 
 
-  <details><summary>Criterios de aceptación</summary><p>
+  <details><summary>Acceptance criteria</summary><p>
 
-  *	El usuario debe estar logeado
-  *	Cada post/reseña deberá tener un botón de Like
-  *	El post/reseña debe llevar un conteo de los Likes recibidos
-  *	El usuario solo podrá dar un like por post/reseña
-  *	Si el usuario clickea el botón de Like en un post que no fue Likeado antes, el usuario agregará un Like al conteo de Likes del post/reseña
-  *	Si el usuario clickea nuevamente el botón de Like en un post previamente Likeado, el usuario retirará un Like al conteo de Likes del post/reseña</p></details>
+* User must be logged in
+* Each post/review must have a Like button
+* The post/review must have a count of the Likes received
+* The user can only give one Like per post/review
+* If the user clicks the Like button on a post that was not previously Liked, the user will add a Like to the Like count of the post/review
+* If the user clicks the Like button again on a previously Liked post, the user will remove a Like from the Like count of the post/review</p></details>
   
-  <details><summary>Definición de terminado</summary><p>
+  <details><summary>Definition of finished</summary><p>
   
-  * Verificación manual de datos en Firestore Database
-  *	Testeo de usabilidad</p></details>
+* Manual verification of data in Firestore Database
+* Usability testing</p></details>
   
-e. Yo como usuario, quiero editar mi post/reseña, para actualizar la información ingresada como disponga
+e. As a user, I want to edit my post/review, to update the information entered as I see fit.
 
-  <details><summary>Criterios de aceptación</summary><p>
+  <details><summary>Acceptance criteria</summary><p>
 
-  *	El usuario debe estar logeado
-  *	El usuario debe haber ya publicado un post/reseña que desee editar
-  *	Debe clickear sobre el botón de puntos suspensivos del post que desea editar y elegir la opción Editar
-  *	Se dirigirá a la vista usada para publicar el post/reseña, donde el texto aparecerá en el input y podrá editarlo
-  *	Para guardar los cambios debe clickear en el botón de Guardar
-  *	El post/reseña editado debe aparecer en el dashboard y sección correspondiente con la información editada
-  *	Al recargar la página los textos deben verse como fueron editados</p></details>
+* The user must be logged in
+* The user must have already published a post/review that they want to edit
+* They must click on the ellipsis button of the post they want to edit and choose the Edit option
+* They will be directed to the view used to publish the post/review, where the text will appear in the input and they can edit it
+* To save the changes, they must click on the Save button
+* The edited post/review must appear in the dashboard and corresponding section with the edited information
+* When reloading the page, the texts should appear as they were edited</p></details>
   
-  <details><summary>Definición de terminado</summary><p>
-  
-  * Verificación manual de datos en Firestore Database
-  *	Testeo de usabilidad</p></details>
-  
-f. Yo como usuario, quiero eliminar mi post/reseña, para dejar de compartir esta información con el resto de usuarios
+  <details><summary>Definition of finished</summary><p>
 
-  <details><summary>Criterios de aceptación</summary><p>
+* Manual verification of data in Firestore Database
+* Usability testing</p></details>
+  
+f. As a user, I want to delete my post/review, to stop sharing this information with other users.
 
-  *	El usuario debe estar logeado
-  *	El usuario debe haber ya publicado un post/reseña que desee eliminar
-  *	Debe clickear sobre el botón de puntos suspensivos del post que desea eliminar y elegir la opción Eliminar
-  *	Una ventana modal aparece en la pantalla preguntando si el usuario está seguro de eliminar el post
-  *	Si elige Aceptar, el post/reseña se eliminará del dashboard y la sección correspondiente
-  *	Si elige Cancelar, el post/reseña se mantendrá</p></details>
+  <details><summary>Acceptance criteria</summary><p>
+
+* The user must be logged in
+* The user must have already published a post/review that they wish to delete
+* They must click on the ellipsis button of the post they wish to delete and choose the Delete option
+* A modal window appears on the screen asking if the user is sure to delete the post
+* If they choose OK, the post/review will be deleted from the dashboard and the corresponding section
+* If they choose Cancel, the post/review will remain</p></details>
   
-  <details><summary>Definición de terminado</summary><p>
+  <details><summary>Definition of finished</summary><p>
   
-  * Verificación manual de datos en Firestore Database
-  *	Testeo de usabilidad</p></details>
+* Manual verification of data in Firestore Database
+* Usability testing</p></details>
   
 ### Hacker edition
 
-a. Yo como usuario, quiero poder comentar un post mio o ajeno, para expresarme sobre el contenido del post
+a. As a user, I want to be able to comment on a post of mine or someone else's, to express myself about the content of the post.
 
-<details><summary>Criterios de aceptación</summary><p>
+<details><summary>Acceptance criteria</summary><p>
 
-  *	El usuario debe estar logeado
-  * El comentario debe hacerse sobre un post existente
-  * Cada post debe tener un input para comentar y botón para enviar
-  * El comentario debe tener el avatar del usuario, su nombre, el mensaje y la hora de posteo
-  * El comentario debe poder ser likeado/deslikeado por todos los usuarios
-  * Solo se permite un like por usuario
-  * Cada comentario hecho por el propio usuario debe tener un botón de opciones
-  * Las opciones del comentario son editar (que abre un modal para editar) y remover (que despliega un modal para confirmar)</p></details>
+* User must be logged in
+* Comment must be made on an existing post
+* Each post must have a comment input and a submit button
+* Comment must have the user's avatar, name, message, and time of posting
+* Comment must be able to be liked/unliked by all users
+* Only one like is allowed per user
+* Each comment made by the user must have an options button
+* Comment options are edit (which opens a modal to edit) and remove (which displays a modal to confirm)</p></details>
+
+  <details><summary>Definition of finished</summary><p>
   
-  <details><summary>Definición de terminado</summary><p>
+* Manual verification of subcollection in Firestore Database
+* Usability testing</p></details>
   
-  * Verificación manual de subcolección en Firestore Database
-  *	Testeo de usabilidad</p></details>
-  
-b. Yo como usuario, quiero añadir imágenes a mis posts, para describir mejor mi post
+b. As a user, I want to add images to my posts, to better describe my post.
 
-<details><summary>Criterios de aceptación</summary><p>
+<details><summary>Acceptance criteria</summary><p>
 
-  *	El usuario debe estar logeado
-  * El usuario debe estar creando/editando un post
-  * El post debe tener un texto
-  * Al hacer click sobre el campo de imagen debe abrir una ventana para elegir una imagen en los archivos locales
-  * El input debe contener el nombre del archivo 
-  * Debajo en un div se mostrará una previsualización de la imagen cargada
-  * El timeline renderizará el post con la imagen debajo del texto
-  * La imagen estará centrada ocupando un tamaño que no deforme el post
-  * Al editar, en el modal, la imagen aparece con la opción de borrarse y permitiendo agregar una nueva
+* The user must be logged in
+* The user must be creating/editing a post
+* The post must have text
+* Clicking on the image field should open a window to choose an image from the local files
+* The input must contain the name of the file
+* Below in a div a preview of the uploaded image will be displayed
+* The timeline will render the post with the image below the text
+* The image will be centered occupying a size that does not deform the post
+* When editing, in the modal, the image appears with the option to delete it and allowing to add a new one
   </p></details>
   
-  <details><summary>Definición de terminado</summary><p>
+  <details><summary>Definition of finished</summary><p>
   
-  * Verificación manual de datos en Firestore Database y Storage
-  *	Testeo de usabilidad</p></details>
+ * Manual verification of data in Firestore Database and Storage
+* Usability testing</p></details>
 
-c. Yo como usuario, quiero poder editar mi perfil, para poder cambiar mi información a mi gusto
+c. As a user, I want to be able to edit my profile, so I can change my information to my liking.
 
-<details><summary>Criterios de aceptación</summary><p>
+<details><summary>Acceptance criteria</summary><p>
 
-  *	El usuario debe estar logeado
-  * El usuario solo puede editar su propio perfil
-  * Al entrar al perfil y hacer click en Editar perfil, se redirecciona a una pantalla con la info actual del usuario (avatar, nombre, fecha de nacimiento y correo)
-  * Haciendo click en el botón de Editar, aparece un modal donde podremos editar nuestros datos
-  * Los campos no pueden quedar vacíos, salvo por el de fecha de nacimiento
-  * Si hay un error, aparecerá un mensaje descriptivo
-  * Cuando los cmabios sean realizados, un mensaje lo confirmará
-  * Para cambiar de contraseña, haremos click sobre el texto de "Cambiar contraseña"
-  * Se nos pedirá ingresar la contraseña actual e ingresar 2 veces la nueva contraseña
-  * Habrán mensajes de error al errar en la contraseña actual o ingresar una contraseña nueva no adecuada
-  * Cuando los cambios de hayan guardado, aparecerá el mensaje "Cambios realizados!"
+ * The user must be logged in
+* The user can only edit their own profile
+* When entering the profile and clicking on Edit profile, you will be redirected to a screen with the current user information (avatar, name, date of birth and email)
+* By clicking on the Edit button, a modal will appear where you can edit your data
+* The fields cannot be left empty, except for the date of birth
+* If there is an error, a descriptive message will appear
+* When the changes are made, a message will confirm it
+* To change the password, click on the "Change password" text
+* You will be asked to enter the current password and enter the new password twice
+* There will be error messages if you enter the wrong current password or enter an inappropriate new password
+* When the changes have been saved, the message "Changes made!" will appear
   </p></details>
   
-  <details><summary>Definición de terminado</summary><p>
+  <details><summary>Definition of finished</summary><p>
   
-  * Verificación manual de datos en Firestore Authentication, Firestore Database y Storage
-  *	Testeo de usabilidad</p></details>
+* Manual verification of data in Firestore Authentication, Firestore Database and Storage
+* Usability testing</p></details>
 
-## 4. Proceso de diseño
+## 4. Design process
 
-**Inspiración inicial**
+[View in slides](https://www.canva.com/design/DAGXhgpeDDU/NDkScoHxC7AzZXzF5jcBZQ/edit?utm_content=DAGXhgpeDDU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/inspo.png" width=700></p>
+## 5. Deploy
 
-**Prototipo de baja fidelidad**
-
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/proto-bf.png" width=800></p>
-
-**Prototipo de alta fidelidad**
-
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/proto-af.png" width=900></p>
-
-## 5. Resultados del testeo
-
-### Testeo manual
-
-En cada sprint del proyecto el equipo testeo la aplicación desde cero para evitar llevarnos bugs de un sprint a otro.  Al destinar el primer sprint al diseño, evitamos muchas fallas en layout, contraste y malentendidos en la interfaz.
-
-La pantallas de registro y login mostraban el mismo eslogan, haciendolas muy similares a primera vista, por lo que decidimos usar el eslogan solo en registro y un mensaje de bienvenida en el login.
-
-Los diferentes modales también tenían errores, no se superponían al contenido del timeline o se superponian entre ellos al abrirlos simultaneamente, para esto anclamos los modales al timeline y creamos una función para hacer un toggle entre ellos.
-
-Los posts tenían una estructura más amplia que el resto de componentes por lo que encontramos muchos problemas en el camino.  Varios procesos de creación/actualización tomaban algo de tiempo, para esto implementamos el uso del loader.  Al editar, un post, la imagen no era editable, esta no cargaba y al volver a publicar, desaparecía.  Por último, el post tenía un max-height que no permitía ver el contenido completo si la imagen ingresada era muy grande, haciendo imposible comentar el post.
-
-En la etapa final del proyecto, agregamos una imagen por defecto a los usuarios nuevos logeados con correo electrónico y corregimos un bug que permitía a un usuario diferente al autor, editar y eliminar el post al inspeccionar la página.
-
-### Testeo en entrevistas
-
-Realizamos varias entrevistas con diferentes usuarios de diferentes perfiles, desde compañeras de bootcamp (que también conocen el proceso de elaboración del proyecto), usuarios con amplia experiencia en redes sociales y usuarios poco experimentados en redes sociales.
-
-Tuvimos un percance al inicio del testeo, olvidamos colocar el url del deploy entre los dominios de Firebase, identificado el problema lo añadimos y continuamos con el testeo.  Los entrevistados coincidieron en que el diseño era agradable y bastante atractivo en su versión móvil, sus componentes son fácilmente entendibles al mirarlos.
-
-## 6. Producto final
-
-### Fotos del resultado final
-
-**Vista mobile del timeline**
-
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-real-timeline.PNG" width=300></p>
-
-**Vista mobile del perfil**
-
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-real-profile.PNG" width=300></p>
-
-**Vista desktop**
-
-<p align="center" width="100%"><img src="https://github.com/lucerogoga/LIM016-social-network/blob/main/readme-images/yami-desktop.PNG" width=1000></p>
+[YAMI](https://lucerogoga.github.io/social-network/src/#/)
